@@ -2,5 +2,8 @@
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
-    "editor.fontFamily": "Hack, monospace"
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "Hack, monospace",
+    "editor.rulers": [100],
+    "files.trimTrailingWhitespace": true
 }
