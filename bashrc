@@ -19,5 +19,7 @@ export PATH=~/code/devtools:$PATH
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-export PS1="\u@\h \w\[\033[34m\]\$(parse_git_branch)\[\033[00m\] $ "
+# `\[\33[XXm\]` represents the beginning of the color code, and `[\033[00m\]` is the end of the color
+# code. Replace XX to change the color.
+export PS1="\[\033[33m\]\u@\h\[\033[00m\] \[\033[36m\](\w)\[\033[00m\] \[\033[34m\]\$(parse_git_branch)\[\033[00m\] $ "
 
