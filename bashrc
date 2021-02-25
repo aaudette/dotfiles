@@ -1,4 +1,4 @@
-##### Copy the following lines into .bash_profile to have these settings loaded
+# Copy the following lines into .bash_profile to have these settings loaded
 # if [ -f ~/.bashrc ]; then
 #    source ~/.bashrc
 # fi
@@ -21,5 +21,5 @@ parse_git_branch() {
 }
 # `\[\33[XXm\]` represents the beginning of the color code, and `[\033[00m\]` is the end of the color
 # code. Replace XX to change the color.
-export PS1="\[\033[33m\]\u@\h\[\033[00m\] \[\033[36m\](\w)\[\033[00m\] \[\033[34m\]\$(parse_git_branch)\[\033[00m\] $ "
+export PS1="\[\033[33m\]\u@\h\[\033[00m\] \[\033[36m\](\w)\[\033[00m\]\[\033[34m\]\$(parse_git_branch)\[\033[00m\] $ "
 

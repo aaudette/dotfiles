@@ -29,5 +29,14 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
+folders="bin"
+# move any existing folders in homedir to dotfiles_old directory, then create symlinks
+for folder in $folders; do
+    echo "Moving any existing dotfiles from ~ to $olddir"
+    mv ~/$folder ~/dotfiles_old/
+    echo "Creating symlink to $folder in home directory."
+    ln -s $dir/$folder ~/$folder
+done
+
 # Special Snowflakes
 ln -s /Users/alanaudette/dotfiles/VSCode/settings.json /Users/alanaudette/Library/Application\ Support/Code/User/settings.json
